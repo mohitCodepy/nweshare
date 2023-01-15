@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload</title>
+    <link rel="stylesheet" href="static/css/upload.css">
+  </head>
+  <body>
+  <div class="contact-form">
+    <h1>Upload here</h1>
+    <div class="txtb">
+      <form action="upload" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Branch :</label>
+       <select class="form-control" name="branch" required>
+          <option value="Computer_Science"> Computer Science </option>
+          <option value="Civil"> Civil </option>
+          <option value="IT"> IT  </option>
+          <option value="Commerce"> Commerce </option>
+       </select><br><br>
+        <label> Subject :</label>
+      <input type="text" name="subject"  placeholder="Enter Subject" required><br><br>
+      <label>Type :</label>
+       <select class="form-control" name="type" required>
+          <option value="PPT"> PPT </option>
+          <option value="PDF"> PDF </option>
+          <option value="DOC"> DOC </option>
+          <option value="XLS"> XLS </option>
+        </select><br><br>
+     <label>Upload here :</label>
+     <input style=" cursor: pointer ;" type='file' name='upload' required ><br><br>
+     <label>Description :</label>
+        <input type="text" name="desc"  placeholder="Enter Description about file"><br><br>
+        <a class="btn"><input type="submit" style="color: white; cursor: pointer;"></a>
+      </form> 
+      </div>
+  </div>
+  </body>
+</html>

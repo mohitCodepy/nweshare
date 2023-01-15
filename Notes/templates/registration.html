@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="static/css/registration.css">
+  </head>
+  <body>
+  <div class="contact-form">
+    <h1>Register here</h1>
+    <div class="txtb">
+      <form action="register" method="POST">
+        {% csrf_token %}
+      <label>Full Name :</label>
+      <input type="text" name="Name"  placeholder="Enter Your Name"><br><br>
+        <label>Username :</label>
+        <input type="text" name="userName"  placeholder="Enter Unique UserName"><br><br>
+      <label>Email :</label>
+      <input type="email" name="Email"  placeholder="Enter Your Email"><br><br>
+      <label>Phone Number :</label>
+      <input type="number" name="Phone_no" placeholder="Enter Your Phone Number"><br><br>
+      <label>Role :</label>
+       <select class="form-control" name="role">
+          <option value="Student"> Student </option>
+          <option value="Teacher"> Teacher </option>
+        </select><br><br>
+      <label>Branch :</label>
+       <select class="form-control" name="branch">
+          <option value="Computer_Science"> Computer Science </option>
+          <option value="Civil"> Civil </option>
+          <option value="IT"> IT  </option>
+          <option value="Commerce"> Commerce </option>
+       </select><br><br>
+     <label>Year :</label>
+       <select class="form-control" name="year">
+          <option value="1"> 1st year </option>
+          <option value="2"> 2nd year</option>
+          <option value="3"> 3rd year</option>
+          <option value="4"> 4th year</option>
+         </select><br><br>
+        <label>Password</label>
+      <input type="password" name="Password"  placeholder="Enter Your Password"><br><br>
+        <label>Confirm-Password</label>
+        <input type="password" name="CmfPassword" placeholder="Re-Enter Your Password"><br><br>
+        <a class="btn"><input type="submit" style="color: white; cursor: pointer;"></a>
+      </form> 
+      </div>
+  </div>
+  </body>
+</html>
